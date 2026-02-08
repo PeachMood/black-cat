@@ -1,0 +1,2 @@
+email_validator==2.3.0
+bcrypt==5.0.0
