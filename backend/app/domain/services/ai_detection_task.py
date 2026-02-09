@@ -1,21 +1,21 @@
 from uuid import UUID
 
-from domain.models.ai_detection import AIDetectionTask
-from domain.models.balance import BalanceTransaction, BalanceTransactionType
-from domain.repositories.ai_detection_task_repository import AIDetectionTaskRepository
-from domain.repositories.balance_repository import BalanceRepository
-from domain.repositories.user_repository import UserRepository
-from domain.repositories.ai_detection_model_repository import AIDetectionModelRepository
+from domain.models.ai_detection_task import AIDetectionTask
+from domain.models.balance_transaction import BalanceTransaction, BalanceTransactionType
+from domain.repositories.ai_detection_task import AIDetectionTaskRepository
+from domain.repositories.balance_transaction import BalanceTransactionRepository
+from domain.repositories.user import UserRepository
+from domain.repositories.ai_detection_model import AIDetectionModelRepository
 
 
 class AIDetectionService:
+
     def __init__(
         self,
         task_repository: AIDetectionTaskRepository,
         user_repository: UserRepository,
-        balance_repository: BalanceRepository,
+        balance_repository: BalanceTransactionRepository,
         model_repository: AIDetectionModelRepository,
-        prediction_cost: int = 1,
     ) -> None:
         self._task_repository = task_repository
         self._user_repository = user_repository
@@ -43,7 +43,7 @@ class AIDetectionService:
                 type=BalanceTransactionType.WITHDRAWAL,
                 amount=prediction_cost,
             )
-            if not self._balance_repository.update_user_balance(withdrawal_transaction):
+            if not self._balance_repository.create(withdrawal_transaction):
                 raise ValueError("Не удалось сохранить транзакцию")
 
             task = AIDetectionTask(

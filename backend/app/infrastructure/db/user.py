@@ -2,7 +2,7 @@ from typing import Optional, List
 from uuid import UUID
 
 from domain.models.user import User
-from domain.repositories.user_repository import UserRepository
+from domain.repositories.user import UserRepository
 
 
 class SQLUserRepository(UserRepository):

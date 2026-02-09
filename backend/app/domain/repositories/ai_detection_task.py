@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Optional, List
 from uuid import UUID
 
-from domain.models.ai_detection import AIDetectionTask
+from domain.models.ai_detection_task import AIDetectionTask
 
 
 class AIDetectionTaskRepository(ABC):
