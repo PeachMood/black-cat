@@ -1,8 +1,8 @@
 from typing import Optional, List
 from uuid import UUID
 
-from domain.models.ai_detection_task import AIDetectionTask
-from domain.repositories.ai_detection_task import AIDetectionTaskRepository
+from app.domain.models.ai_detection_task import AIDetectionTask
+from app.domain.repositories.ai_detection_task import AIDetectionTaskRepository
 
 
 class SQLAIDetectionTaskRepository(AIDetectionTaskRepository):

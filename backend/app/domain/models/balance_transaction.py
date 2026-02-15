@@ -1,6 +1,7 @@
 from enum import StrEnum
 from uuid import UUID
-from base_model import BaseModel
+
+from app.domain.models.base_model import BaseModel
 
 
 class BalanceTransactionType(StrEnum):

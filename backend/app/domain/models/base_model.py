@@ -3,11 +3,6 @@ from datetime import datetime
 from uuid import UUID, uuid4
 
 
-from abc import ABC, abstractmethod
-from datetime import datetime
-from uuid import UUID, uuid4
-
-
 class BaseModel(ABC):
     def __init__(self) -> None:
         self._id: UUID = uuid4()

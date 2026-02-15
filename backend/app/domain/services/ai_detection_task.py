@@ -1,11 +1,14 @@
 from uuid import UUID
 
-from domain.models.ai_detection_task import AIDetectionTask
-from domain.models.balance_transaction import BalanceTransaction, BalanceTransactionType
-from domain.repositories.ai_detection_task import AIDetectionTaskRepository
-from domain.repositories.balance_transaction import BalanceTransactionRepository
-from domain.repositories.user import UserRepository
-from domain.repositories.ai_detection_model import AIDetectionModelRepository
+from app.domain.models.ai_detection_task import AIDetectionTask
+from app.domain.models.balance_transaction import (
+    BalanceTransaction,
+    BalanceTransactionType,
+)
+from app.domain.repositories.ai_detection_task import AIDetectionTaskRepository
+from app.domain.repositories.balance_transaction import BalanceTransactionRepository
+from app.domain.repositories.user import UserRepository
+from app.domain.repositories.ai_detection_model import AIDetectionModelRepository
 
 
 class AIDetectionService:

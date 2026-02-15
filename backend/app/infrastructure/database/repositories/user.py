@@ -1,8 +1,8 @@
-from typing import Optional, List
+from typing import Optional
 from uuid import UUID
 
-from domain.models.user import User
-from domain.repositories.user import UserRepository
+from app.domain.models.user import User
+from app.domain.repositories.user import UserRepository
 
 
 class SQLUserRepository(UserRepository):

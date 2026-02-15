@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import List
 from uuid import UUID
 
-from domain.models.balance_transaction import BalanceTransaction
+from app.domain.models.balance_transaction import BalanceTransaction
 
 
 class BalanceTransactionRepository(ABC):

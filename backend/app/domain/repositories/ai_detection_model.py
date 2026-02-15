@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from domain.models.ai_detection_model import AIDetectionResult
+from app.domain.models.ai_detection_model import AIDetectionResult
 
 
 class AIDetectionModelRepository(ABC):

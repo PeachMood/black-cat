@@ -1,8 +1,8 @@
 from typing import List
 from uuid import UUID
 
-from domain.models.balance_transaction import BalanceTransaction
-from domain.repositories.balance_transaction import BalanceTransactionRepository
+from app.domain.models.balance_transaction import BalanceTransaction
+from app.domain.repositories.balance_transaction import BalanceTransactionRepository
 
 
 class SQLBalanceTransactionRepository(BalanceTransactionRepository):

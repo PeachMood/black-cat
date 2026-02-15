@@ -2,8 +2,8 @@ from enum import StrEnum
 from typing import Optional
 from uuid import UUID
 
-from domain.models.ai_detection_model import AIDetectionResult
-from domain.models.base_model import BaseModel
+from app.domain.models.base_model import BaseModel
+from app.domain.models.ai_detection_model import AIDetectionResult
 
 
 class AIDetectionTaskStatus(StrEnum):

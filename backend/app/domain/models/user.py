@@ -1,7 +1,8 @@
-from enum import StrEnum
-from base_model import BaseModel
-from email_validator import validate_email
 import bcrypt
+from enum import StrEnum
+from email_validator import validate_email
+
+from app.domain.models.base_model import BaseModel
 
 
 class UserRole(StrEnum):

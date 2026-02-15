@@ -1,8 +1,8 @@
 # import os
 # from huggingface_hub import InferenceClient
 
-from domain.models.ai_detection_model import AIDetectionResult
-from domain.repositories.ai_detection_model import AIDetectionModelRepository
+from app.domain.models.ai_detection_model import AIDetectionResult
+from app.domain.repositories.ai_detection_model import AIDetectionModelRepository
 
 
 class Dima806AIDetectionModelRepository(AIDetectionModelRepository):
