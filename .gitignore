@@ -1,0 +1,32 @@
+# Файлы окружения (шаблоны оставляем в репозитории)
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Виртуальные окружения
+.venv/
+venv/
+venv.bak/
+
+# Артефакты сборки
+build/
+dist/
+site/
+
+# Логи и runtime-файлы
+*.log
+*.pid
+*.out
+*.err
+
+# Файлы ОС и IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Локальные данные контейнеров и экспорты
+docker-data/
+rabbitmq-data/
+*.tar
